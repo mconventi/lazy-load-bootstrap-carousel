@@ -19,4 +19,5 @@ More info can be found on http://www.maurizioconventi.com
 
 License
 ============================
-This code is released under the MIT license, you are free to use and edit it.
+This project is licensed under the [MIT License](LICENSE).
+
