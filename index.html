@@ -1,77 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>A Lazy Carousel with Twitter Bootstrap</title>
-    <meta name="description" content="">
-    <meta name="author" content="Maurizio Conventi">
-
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-    <!-- Le styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Lazy Carousel with Bootstrap</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="css/base.css" rel="stylesheet">
-    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="container py-4">
       <div class="row">
-        <div class="span10 offset1">
-            <h2>An example of lazy carousel with twitter bootstrap</h2>
-            <p>I created this page in order to show you how to create a lazy carousel with twitter bootstrap.</p>
-            <div id="main-carousel" class="carousel slide" data-ride="carousel">
-                <!-- Indicators -->
-                <ol class="carousel-indicators">
-                  <li data-target="#main-carousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#main-carousel" data-slide-to="1"></li>
-                  <li data-target="#main-carousel" data-slide-to="2"></li>
-                </ol>
-                <!-- Carousel items -->
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img alt="Jaipur" title="Jaipur picture 01" src="img/carousel/Jaipur-1.JPG" />
-                        <div class="carousel-caption">
-                            <h3>Jaipur picture 01</h3>
-                            <p>A picture from my travel in India.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img alt="Jaipur" title="Jaipur picture 02" lazy-src="img/carousel/Jaipur-2.JPG" />
-                        <div class="carousel-caption">
-                            <h3>Jaipur picture 02</h3>
-                            <p>A picture from my travel in India.</p>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <img alt="Jaipur" title="Jaipur picture 03" lazy-src="img/carousel/Jaipur-3.JPG" />
-                        <div class="carousel-caption">
-                            <h3>Jaipur picture 03</h3>
-                            <p>A picture from my travel in India.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Image loading icon -->
-                <div class="loading hide"><img src="img/black.png"/></div>
-
-                <!-- Carousel nav -->
-                <a class="carousel-control left" href="#main-carousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                <a class="carousel-control right" href="#main-carousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+        <div class="col-md-10 offset-md-1">
+          <h2>An example of lazy carousel with Bootstrap</h2>
+          <p>I created this page in order to show you how to create a lazy carousel with Bootstrap.</p>
+          <div id="main-carousel" class="carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#main-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/carousel/Jaipur-1.JPG" class="d-block w-100" alt="Jaipur" title="Jaipur picture 01">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Jaipur picture 01</h3>
+                  <p>A picture from my travel in India.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img lazy-src="img/carousel/Jaipur-2.JPG" class="d-block w-100" alt="Jaipur" title="Jaipur picture 02">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Jaipur picture 02</h3>
+                  <p>A picture from my travel in India.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img lazy-src="img/carousel/Jaipur-3.JPG" class="d-block w-100" alt="Jaipur" title="Jaipur picture 03">
+                <div class="carousel-caption d-none d-md-block">
+                  <h3>Jaipur picture 03</h3>
+                  <p>A picture from my travel in India.</p>
+                </div>
+              </div>
+            </div>
+            <div class="loading d-none"><img src="img/black.png" alt="loading"></div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#main-carousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#main-carousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
         </div>
       </div>
-    </div> <!-- /container -->
-
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery-1.7.2.min.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="js/lazy-bootstrap-carousel-v3.js"></script>
+    </div>
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/lazy-bootstrap-carousel-v5.js"></script>
     <script src="js/base.js"></script>
   </body>
 </html>
