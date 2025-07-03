@@ -1,8 +1,10 @@
-
 /**
  * Base js file
  */
-$(document).ready(function(){
-    //Start carousel
-    $('.carousel').carousel({interval:false});
+$(function(){
+    var element = document.getElementById('main-carousel');
+    if(element){
+        var carousel = new bootstrap.Carousel(element,{interval:false});
+        $(element).lazyCarousel();
+    }
 });
