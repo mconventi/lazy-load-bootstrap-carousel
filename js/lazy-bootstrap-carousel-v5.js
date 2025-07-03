@@ -12,10 +12,10 @@
       var $img = $next.find('img[lazy-src]');
       if(!$img.length) return;
       e.preventDefault();
-      self.$loading.removeClass('hide');
+      self.$loading.removeClass('d-none');
       $img.one('load error', function(){
         $img.removeAttr('lazy-src');
-        self.$loading.addClass('hide');
+        self.$loading.addClass('d-none');
         self.$carousel.carousel(e.to);
       });
       $img.attr('src', $img.attr('lazy-src'));
