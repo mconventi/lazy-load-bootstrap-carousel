@@ -41,5 +41,4 @@ I created a simple example in the patch. It is useful to understand how to creat
 More info can be found on http://www.maurizioconventi.com
 
 License
-============================
-This code is released under the [MIT license](https://opensource.org/licenses/MIT). You are free to use and edit it.
+This project is licensed under the [MIT License](LICENSE).
